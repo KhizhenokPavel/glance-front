@@ -163,17 +163,17 @@ const PRODUCTS: Array<Product> = [
 </script>
 
 <template>
-	<div class="promotions">
-		<MainContentWrapper class="promotions__title">
-			Акции
+	<div class="viewed">
+		<MainContentWrapper class="viewed__title">
+			Вы смотрели
 		</MainContentWrapper>
-		<div class="promotions__swiper">
+		<div class="viewed__swiper">
 			<BaseSwiper
 					:centeredSlides="false"
 					:isBlackArrow="true"
 					class="products__list-wrapper"
 			>
-				<SwiperSlide v-for="product in PRODUCTS" class="promotions__slide">
+				<SwiperSlide v-for="product in PRODUCTS" class="viewed__slide">
 					<ProductItem :product="product" :showDescription="true"/>
 				</SwiperSlide>
 			</BaseSwiper>
@@ -204,7 +204,7 @@ const PRODUCTS: Array<Product> = [
 	}
 }
 
-.promotions {
+.viewed {
 	display: flex;
 	flex-direction: column;
 	gap: 28px;

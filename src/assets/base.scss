@@ -1,3 +1,5 @@
+@import '@/assets/mixins';
+
 :root {
   --vt-c-white: #f6f6f6;
   --vt-c-dark-blue: #091d9e;
@@ -13,6 +15,13 @@
 
   --vt-c-not-active: #505050;
   --vt-c-field: #dedede;
+
+  // sizes
+  --main-content-padding: 16px;
+
+  @include adaptive {
+    --main-content-padding: 80px;
+  }
 }
 
 :root {

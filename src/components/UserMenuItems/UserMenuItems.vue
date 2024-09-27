@@ -68,7 +68,10 @@ const MENU_ITEMS = [
 		justify-content: space-between;
 		width: 100%;
 		max-width: 500px;
-		gap: 32px;
+
+		@include adaptive {
+			gap: 32px;
+		}
 	}
 
 	@include adaptive {

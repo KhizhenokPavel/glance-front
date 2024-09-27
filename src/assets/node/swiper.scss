@@ -1,4 +1,4 @@
-@import "node_modules/swiper/swiper.css";
+@import "node_modules/swiper/swiper";
 @import "@/assets/mixins";
 
 :root {
@@ -21,5 +21,13 @@
 
 	@include adaptive {
 		max-width: 200px;
+	}
+}
+.products__list-wrapper .swiper-wrapper {
+	max-width: 144px;
+	width: 100%;
+
+	@include adaptive {
+		max-width: 169px;
 	}
 }

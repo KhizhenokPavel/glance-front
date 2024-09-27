@@ -24,11 +24,10 @@ const props = defineProps<{
   padding-bottom: 15px;
   max-width: 267px;
   color: var(--vt-c-not-active);
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 14px;
   font-weight: 500;
 
-  .active & {
+	&.active {
     color: var(--vt-c-white);
     background-color: var(--vt-c-dark-blue);
   }

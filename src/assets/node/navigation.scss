@@ -1,3 +1,4 @@
+@import "node_modules/swiper/modules/navigation";
 @import "@/assets/mixins";
 
 :root {
@@ -7,17 +8,11 @@
 }
 .swiper-button-prev,
 .swiper-button-next {
-	position: absolute;
 	border-radius: calc(var(--swiper-navigation-size) / 2);
 	border: 1px var(--vt-c-grey) solid;
 	top: var(--swiper-navigation-top-offset, 50%);
 	width: var(--swiper-navigation-size);
 	height: var(--swiper-navigation-size);
-	margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-	z-index: 10;
-	cursor: pointer;
-	align-items: center;
-	justify-content: center;
 	color: var(--vt-c-grey, var(--swiper-theme-color));
 	display: none;
 
@@ -34,39 +29,14 @@
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
 	display: none;
-	cursor: auto;
-	pointer-events: none;
-}
-.swiper-button-prev.swiper-button-hidden,
-.swiper-button-next.swiper-button-hidden {
-	opacity: 0;
-	cursor: auto;
-	pointer-events: none;
-}
-.swiper-navigation-disabled .swiper-button-prev,
-.swiper-navigation-disabled .swiper-button-next {
-	display: none !important;
-}
-.swiper-button-prev svg,
-.swiper-button-next svg {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	transform-origin: center;
-}
-.swiper-rtl .swiper-button-prev svg,
-.swiper-rtl .swiper-button-next svg {
-	transform: rotate(180deg);
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
 	left: var(--swiper-navigation-sides-offset, 24px);
-	right: auto;
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
 	right: var(--swiper-navigation-sides-offset, 24px);
-	left: auto;
 }
 .swiper-button-black .swiper-button-prev,
 .swiper-button-black .swiper-rtl .swiper-button-next {
@@ -76,28 +46,7 @@
 .swiper-button-black .swiper-rtl .swiper-button-prev {
 	right: 0;
 }
-.swiper-button-lock {
-	display: none;
-}
 .swiper-button-prev:after,
 .swiper-button-next:after {
-	font-family: swiper-icons;
 	font-size: var(--swiper-arrow-size);
-	text-transform: none !important;
-	letter-spacing: 0;
-	font-variant: initial;
-	line-height: 1;
-}
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-	content: 'prev';
-}
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-	right: var(--swiper-navigation-sides-offset, 10px);
-	left: auto;
-}
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-	content: 'next';
 }

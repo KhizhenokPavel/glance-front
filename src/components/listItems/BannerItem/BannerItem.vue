@@ -24,7 +24,6 @@
 
 <style scoped lang="scss">
 .banner {
-	min-width: 275px;
 	width: 100%;
 	height: 100%;
 	display: flex;

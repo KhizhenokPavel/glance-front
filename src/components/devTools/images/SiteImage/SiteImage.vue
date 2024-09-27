@@ -21,6 +21,8 @@ const props = defineProps({
 .image {
   object-fit: contain;
   flex-shrink: 0;
+	max-height: 100%;
+	max-width: 100%;
 
 	&__container {
     display: flex;
